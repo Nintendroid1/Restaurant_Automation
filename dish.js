@@ -1,4 +1,8 @@
-class Menu {
+/**
+ * Dish class that lists the name as a string, the price as a float,
+ * the ingredients as a list, and the prepration info as a string
+ */
+class Dish {
     constructor(dishName, price, ingredientList, prepInfo) {
       this.dishName = dishName; //String
       this.price = price; //float
