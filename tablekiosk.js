@@ -5,7 +5,7 @@
 class TableKiosk {
     constructor(kioskNum, assignment, menu) {
       this.kioskNum = kioskNum; //int
-      this.assignment = assignmetnt; //Table class
+      this.assignment = assignment; //Table class
       this.menu = menu; //Menu class
     }
     get getKioskNum() {
