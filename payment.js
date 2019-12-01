@@ -3,7 +3,7 @@
  */
 class Payment {
     constructor(type, price, bank) {
-      this.type = type; //PaymentType
+      this.type = type; //PaymentType class
       this.price = price; //float
       this.bank = bank; //String
 

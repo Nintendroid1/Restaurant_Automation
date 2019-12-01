@@ -7,7 +7,7 @@ class Menu {
     constructor(menuItems, specials, inventory) {
       this.menuItems = menuItems; //List[Dish]
       this.specials = specials; //List[Dish]
-      this.inventory = inventory; //IventorySystem
+      this.inventory = inventory; //IventorySystem class
 
     }
     get getMenuItems() {
