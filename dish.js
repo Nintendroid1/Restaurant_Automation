@@ -26,8 +26,8 @@ class Dish {
     get getIngredientList() {
         return this.ingredientList;
     }
-    set setIngredientList(x) {//Adds to the ingredient list, not a whole list
-        this.ingredientList.push(x);
+    set setIngredientList(x) {
+        this.ingredientList = x;
     }
     
     get getPrepInfo() {

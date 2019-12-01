@@ -13,15 +13,15 @@ class Menu {
     get getMenuItems() {
         return this.menuItems;
     }
-    set setMenuItems(x) {//Adds to the menu, not a whole list
-        this.menuItems.push(x);
+    set setMenuItems(x) {
+        this.menuItems = x;
     }
 
     get getSpecials() {
         return this.specials;
     }
-    set setSpecials(x) {//Adds to the menu, not a whole list
-        this.setSpecials.push(x);
+    set setSpecials(x) {
+        this.setSpecials = x;
     }
 
     get checkInventory() {
