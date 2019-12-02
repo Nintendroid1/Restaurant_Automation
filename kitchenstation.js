@@ -4,7 +4,7 @@
  */
 class KitchenStation {
     constructor(kitchenTables) {
-      this.kitchenTables = kitchenTables; //int
+      this.kitchenTables = kitchenTables; //List[KitchenTable]
     }
 
     //Returns null if out of range
