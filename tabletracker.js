@@ -8,11 +8,24 @@ class TableTracker {
     }
 
     //Returns null if out of range
-    showTableAvailability(index) {
-        if(index < 0 || index > this.kitchenTables.length) {
+    queryTable(index) {
+        if(index < 0 || index > this.tables.length) {
             return null;
         }
         return this.tables[index];
+    }
+
+    showTableAvailability() {
+        var availTables = [];
+        for(i = 0; i<this.tables.length; i++) {
+            var currTable = this.tables[i];
+
+            //Check to see if table is dirty
+            if(!currTable.isOccupied) {
+                dirtyTables.push(currTable);
+            }
+        }
+        return availTables;
     }
 
     showTableEstimateAvailbility() {

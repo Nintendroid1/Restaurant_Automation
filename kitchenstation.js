@@ -18,9 +18,14 @@ class KitchenStation {
     getDirty() {
         var dirtyTables = [];
         for(i = 0; i<this.kitchenTables.length; i++) {
-            dirtyTables.push(this.kitchenTables[i]);
+            var currTable = this.kitchenTables[i];
+
+            //Check to see if table is dirty
+            if(currTable.isDirty) {
+                dirtyTables.push(currTable);
+            }
         }
-        return dirtyTables
+        return dirtyTables;
     }
 
     //Returns true if successfully set dirty

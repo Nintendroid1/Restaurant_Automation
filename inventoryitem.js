@@ -11,6 +11,11 @@ class InventoryItem {
       this.supplier = supplier; //Supplier class
       this.stocked = stocked; //boolean
       this.expirationDate = expirationDate; //string
+
+      //Calculates the inventoryID by
+      //hashing the unique name
+      this.inventoryID = hash(name); //int
+
     }
     get getName() {
         return this.name;
