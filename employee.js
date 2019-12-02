@@ -3,7 +3,7 @@
  */
 class Employee {
     constructor(employeeID, contactInfo) {
-      this.employeeID = employeeID; //string
+      this.employeeID = employeeID; //int
       this.contactInfo = contactInfo; //Contact class
     }
     get getEmployeeID() {
