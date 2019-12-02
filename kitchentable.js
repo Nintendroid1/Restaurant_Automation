@@ -1,5 +1,6 @@
 /**
- * Employee class represent's the employee themselves
+ * KitchenTable class represents the single work area chefs work
+ * on to prepare food
  */
 class KitchenTable {
     constructor(stationNum, location, dirty, assignment) {
@@ -24,6 +25,10 @@ class KitchenTable {
 
     get isDirty() {
         return this.dirty;
+    }
+
+    set setDirtyStatus(x) {
+        this.dirty = x;
     }
 
     get getAssignment() {
