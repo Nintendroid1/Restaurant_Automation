@@ -17,7 +17,7 @@ class TableTracker {
 
     showTableAvailability() {
         var availTables = [];
-        for(i = 0; i<this.tables.length; i++) {
+        for(let i = 0; i<this.tables.length; i++) {
             var currTable = this.tables[i];
 
             //Check to see if table is dirty
@@ -29,6 +29,10 @@ class TableTracker {
     }
 
     showTableEstimateAvailbility() {
-        //TODO
+        let leastTime = 0;
+        for (Table t in tables) {
+            if (t.time < )
+        }
+
     }
 }
