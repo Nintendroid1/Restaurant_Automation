@@ -36,4 +36,17 @@ class Dish {
     set setPrepInfo(x) {
         this.prepInfo = x;
     }
+
+    checkIngredients() {
+        let result = false;
+        for (let ingredient in this.ingredientList) {
+            if (ingredient.isAvailable()) {
+                result = true;
+            }
+            else {
+                result = false;
+            }
+        }
+        return result;
+    }
 }

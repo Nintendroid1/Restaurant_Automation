@@ -2,10 +2,11 @@
  * Payment class represents the customer's purchase
  */
 class Payment {
-    constructor(type, price, bank) {
+    constructor(type, price, bank, time) {
       this.type = type; //PaymentType class
       this.price = price; //float
       this.bank = bank; //String
+      this.time = time;
 
     }
     get getPaymentType() {

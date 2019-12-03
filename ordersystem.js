@@ -6,6 +6,7 @@ class OrderSystem {
     constructor(menu) {
         this.menu = menu // Menu class
         this.globalOrderNum = 0; // int
+        this.orderList = [];
     }
     get getMenu() {
         return this.menu;
@@ -15,14 +16,24 @@ class OrderSystem {
         this.menu = x;
     } 
 
+    get getOrderList() {
+        return this.orderList;
+    }
+
     placeOrder(dishList, payment) {
-        return new Order(this.globalOrderNum++, dishList, payment, 0);
+        var currOrder = new Order(this.globalOrderNum++, dishList, payment, 0);
+        this.orderList.append(currOrder);
+        return currOrder;
     }
 
     trackOrder(orderIndex) {
         //Global data structure that keeps 
         //track of all orders
        return OrderList[orderIndex].getStatus();
+    }
+
+    toString() {
+        return JSON.stringify(orderList);
     }
 }
 
@@ -31,10 +42,11 @@ class OrderSystem {
  * the customer will interact with at each table
  */
 class TableKiosk {
-    constructor(kioskNum, assignment, menu) {
+    constructor(kioskNum, assignment, menu, orderIndex) {
       OrderSystem.call(menu); //Parent Class
       this.kioskNum = kioskNum; //int
       this.assignment = assignment; //Table class
+      this.orderNum = orderNum //int
     }
     get getKioskNum() {
         return this.kioskNum;
@@ -51,7 +63,7 @@ class TableKiosk {
     }
 
     checkOrderStatus() {
-        //TODO
+        trackOrder(OrderNum);
     }
 }
 

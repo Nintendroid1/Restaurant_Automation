@@ -24,7 +24,20 @@ class Menu {
         this.setSpecials = x;
     }
 
-    get checkInventory() {
-        //TODO
+    checkInventory() {
+        let temp = [];
+        for (let dish in this.menuItems) {
+            if (dish.checkIngredients()) {
+                temp.append(dish);
+            }
+        }
+        this.menuItems = temp;
+        temp = [];
+        for (let dish in this.specials) {
+            if (dish.checkIngredients()) {
+                temp.append(dish);
+            }
+        }
+        this.specials = temp;
     }
   }

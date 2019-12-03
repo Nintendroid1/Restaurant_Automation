@@ -57,6 +57,8 @@ class InventoryItem {
     }
 
     restockItem() {
-        //TODO
+        if (!this.stocked || this.quantity < 30) {
+            this.supplier.notifySupplier();
+        }
     }
 }

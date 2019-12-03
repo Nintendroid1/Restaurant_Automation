@@ -3,8 +3,9 @@
  * done through card
  */
 class CardHandler {
-    constructor(payment) {
+    constructor(payment, accountingSystem) {
       this.payment = this.payment; //Payment class
+      this.accountingSystem = accountingSystem; //AccountingSystem class
     }
 
     //Returns change if applicable
@@ -17,6 +18,6 @@ class CardHandler {
     }
 
     sendPaymentToAccounting() {
-        //TODO
+        this.accountingSystem.addPayment(this);
     }
 }

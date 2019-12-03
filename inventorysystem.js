@@ -10,6 +10,8 @@ class InventorySystem {
       //to the system
       this.frozenItems = []; //List[InventoryItem]
       this.freshItems = []; //List[InventoryItem]
+      this.consumedItems = [];
+      this.expiredItems = [];
     }
 
     //Returns null if out of range
@@ -43,5 +45,11 @@ class InventorySystem {
             }
         }
         return expiredItems;
+    }
+
+    restockInventory() {
+        for (let item in this.inventoryList) {
+            item.restockItem();
+        }
     }
 }

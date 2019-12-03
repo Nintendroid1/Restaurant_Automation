@@ -3,10 +3,11 @@
  * done through card
  */
 class CardHandler {
-    constructor(payment, cardNumber, securityCode) {
+    constructor(payment, cardNumber, securityCode, accountingSystem) {
       this.payment = this.payment; //Payment class
       this.cardNumber = this.cardNumber; //String
       this.securityCode = securityCode; //String
+      this.accountingSystem = accountingSystem;
     }
 
     //Returns true if payment was successful
@@ -28,6 +29,6 @@ class CardHandler {
     }
 
     sendPaymentToAccounting() {
-        //TODO
+        this.accountingSystem.addPayment(this);
     }
 }

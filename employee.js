@@ -42,9 +42,10 @@ class Chef {
  * Waiter subclass represents an employee that is assigned a table
  */
 class Waiter {
-    constructor(employeeID, contactInfo, tableAssignment) {
+    constructor(employeeID, contactInfo, tableAssignment, orderNum) {
         Employee.call(employeeID, contactInfo);
         this.tableAssignment = tableAssignment;
+        this.orderNum = orderNum;
     }
 
     get getTableAssignment() {
@@ -52,5 +53,9 @@ class Waiter {
     }
     set setTableAssignment(x) {
         this.tableAssignment = x;
+    }
+
+    get getOrderNum() {
+        return this.orderNum;
     }
 }

@@ -10,6 +10,7 @@ class Table {
       this.occupied = occupied; //boolean
       this.assignment = assignment; //Waiter class
       this.kiosk = kiosk; //TableKiosk class
+      this.time = 0;
     }
     get getTableNum() {
         return this.tableNum;
@@ -53,5 +54,13 @@ class Table {
 
     set setKiosk(x) {
         this.kiosk = x;
+    }
+
+    get getTime() {
+        return this.time;
+    }
+
+    set setTime(x) {
+        this.time = x;
     }
 }

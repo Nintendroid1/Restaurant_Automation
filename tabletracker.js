@@ -3,8 +3,9 @@
  * tables customers dine from
  */
 class TableTracker {
-    constructor(tables) {
+    constructor(tables, orderSystem) {
       this.tables = tables; //List[Table]
+      this.orderSystem = orderSystem;
     }
 
     //Returns null if out of range
@@ -30,9 +31,25 @@ class TableTracker {
 
     showTableEstimateAvailbility() {
         let leastTime = 0;
-        for (Table t in tables) {
-            if (t.time < )
+        for (let table in tables) {
+            if (!table.occupied) {
+                table.setTime(0) ;
+            }
         }
-
+        for (let order in this.orderSystem.getOrderList()) {
+            let table = tables[order.getTableNum()];
+            switch (order.getStatus()) {
+                case RECEIVED:
+                    table.setTime(table.getTime() + 60); //minutes
+                    break;
+                case IN_PROGRESS:
+                    table.setTime(table.getTime() + 50);
+                    break;
+                case COMPLETE:
+                    table.setTime(table.getTime() + 40);
+                    break;
+            }
+        }
+        return this.tables.map(x => x.time);
     }
 }
